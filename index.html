@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+     body{
+         text-align:center;
+         background-image:url('starmoon.jpg');
+     }
+     .containeer{
+        
+         width:500px;
+         height:650px;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         margin:10% auto;
+         box-shadow:3px 3px 4px yellow,6px 6px 8px black;
+         background-image:linear-gradient(-45deg,purple,blue,yellow,green);
+         animation-name:calculator;
+         animation-duration: 4s;
+         animation-timing-function:step(6);
+         animation-delay: 3s;
+         animation-iteration-count:infinite;
+         animation-direction:alternate-reverse;
+         border-radius:5px;
+         
+         
+     }
+     @keyframes calculator{
+         0%{background-image:radial-gradient(circle,orange,lightblue,#45ddee,lightgreen)}
+         50%{background-image:conic-gradient(brown,darkgreen,purple,white)}
+
+     }
+     input{
+         margin:4px 10px;
+         width: 90px;
+         height:90px;
+         border:5px groove red;
+         border-radius:15px;
+         font-size:45px;
+         font-weight: bold;
+         background:grey;
+         cursor: pointer;
+         box-sizing: border-box;
+         
+     }
+     input:hover{
+         background-image:conic-gradient(red,green,blue,yellow);
+         color:blue;
+     }
+     #main{
+         width:450px;
+         height:90px;
+         border:6px inset white;
+         border-radius:20px;
+         font-size:50px;
+         padding:0px;
+         margin-top:0px;
+         background:white;
+         animation:sample 2s ease 1s infinite alternate-reverse ;
+     }
+     @keyframes sample{
+         0%{border-radius:0px;}
+         50%{border-radius:20px;background:lawngreen}
+         100%{border-radius:40px;background-color:deepskyblue}
+     }
+     .containeer p{
+         float:right;
+         font-size: 20px;
+         border:6px ridge white;
+         background-image:repeating-conic-gradient(red,yellow,pink,blue,grey,green);
+         color:darkred;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         font-size: initial;
+         font-weight: bold;
+         font-variant: small-caps; 
+     }
+    </style>
+</head>
+<body>
+    <div class="containeer">
+        <form name="header">
+            <input type="text" name="answer" id="main"><br>
+            <input type="button" value="7" onclick="header.answer.value+='7'">
+            <input type="button" value="4" onclick="header.answer.value+='4'">
+            <input type="button" value="1" onclick="header.answer.value+='1'">
+            <input type="button" value="0" onclick="header.answer.value+='0'"> 
+            <br>
+            <input type="button" value="8" onclick="header.answer.value+='8'">
+            <input type="button" value="5" onclick="header.answer.value+='5'">
+            <input type="button" value="2" onclick="header.answer.value+='2'">
+            <input type="button" value="." onclick="header.answer.value+='.'">
+            <br>
+            <input type="button" value="9" onclick="header.answer.value+='9'">
+            <input type="button" value="6" onclick="header.answer.value+='6'">
+            <input type="button" value="3" onclick="header.answer.value+='3'">
+            <input type="button" value="+" onclick="header.answer.value+='+'">
+            <br>
+            <input type="button" value="/" onclick="header.answer.value+='/'">
+            <input type="button" value="*" onclick="header.answer.value+='*'">
+            <input type="button" value="-" onclick="header.answer.value+='-'">
+            <input type="button" value="=" onclick="header.answer.value=eval(header.answer.value)">
+            <br>
+            <input type="button" value="C" onclick="header.answer.value=''">
+            <input type="button" value="(" onclick="header.answer.value+='('">
+            <input type="button" value=")" onclick="header.answer.value+=')'">
+            <input type="button" value="%" onclick="header.answer.value+='%'">
+            <p>Created By:Rahul Roy</p>
+             
+        </form>
+      
+
+    </div>
+    <audio controls autoplay loop >
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>
